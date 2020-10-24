@@ -3,10 +3,9 @@ layout: layouts/base.njk
 contained: true
 templateClass: post
 ---
-<header role="banner" class="page-header">
-  <a href="/">← Go back</a>
+<header role="banner" class="page-header">  
   <h1>{{ title }}</h1>    
-  <p>{{ description }}</p>
+  <p>Last updated {{date | readableDate}}</p>
 </header>
 
 {{ content | safe }}

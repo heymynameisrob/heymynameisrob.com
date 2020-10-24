@@ -1,6 +1,6 @@
 ---
 title: Moving in an opposite direction
-date: 2020-09-28
+date: 2020-10-23
 type: Article
 layout: layouts/post.njk
 ---
