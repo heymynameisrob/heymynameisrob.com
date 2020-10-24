@@ -1,0 +1,15 @@
+{
+  "title": "Hey, my name is Rob 👋",
+  "url": "https://heymynameisrob.com",
+  "description": "UX/UI designer living and working in England. I design and build products, as well as write about tech and design.",
+  "feed": {
+    "subtitle": "Hey, my name is Rob",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://heymynameisrob.com"
+  },
+  "author": {
+    "name": "Rob Hough",
+    "email": "robhough@hey.com"
+  }
+}

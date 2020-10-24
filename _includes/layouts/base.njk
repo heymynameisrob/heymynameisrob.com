@@ -1,0 +1,24 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ renderData.title or title or metadata.title }}</title>
+    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{{ '/static/style.css' | url }}">    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+  </head>
+  <body {% if templateClass %} class="{{ templateClass }}"{% endif %}>            
+    <main>      
+      {{ content | safe }}
+      <footer>          
+        <small>&copy; 2020. Built in code. </small>
+      </footer>  
+    </main>                 
+    <script src="{{ '/static/main.js' | url }}"></script>
+  </body>
+</html>

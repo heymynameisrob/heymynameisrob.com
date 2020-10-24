@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+contained: true
+templateClass: post
+---
+<header role="banner" class="page-header">
+  <a href="/">← Go back</a>
+  <h1>{{ title }}</h1>    
+  <p>{{ description }}</p>
+</header>
+
+{{ content | safe }}
