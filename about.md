@@ -4,6 +4,7 @@ title: Hello there! 👋
 description: How it all started
 date: 2020-10-10
 ---
+
 My name is Rob. I've been designing professinally for around 6 years. I work at [nuom](https://nuom.co.uk), where I lead the product team to help our partners design and ship great products. 
 
 I also work on some side-projects, such as Deal Delivers. I worked with these guys to create an online directory of local services that delivered to people during the coronavirus pandemic. This not only helped people access vital services, but also help keep local businesses afloat – which made us feel pretty good about ourselves.

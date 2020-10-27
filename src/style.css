@@ -1,6 +1,6 @@
 :root {
   --bg:#fbf7f0;
-  --primary:rgb(253, 126, 20);
+  --primary:#fd7e14;
   --primary-dark:rgb(205, 99, 12);
   --primary-muted:#ffd8a8;
   --grey:#cbc6bd;
@@ -9,9 +9,8 @@
   --text-light:#43484b;
   --text-disabed:#727576;
 
-  --font-sans-serif: 'Proxima Nova Alt', sans-serif;
-  --font-serif: 'Galaxie Copernicus', serif;
-  --font-fancy: 'Rylan', sans-serif;
+  --font-sans-serif: 'Proxima Nova', sans-serif;
+  --font-serif: 'Galaxie Copernicus', serif;  
   --font-stack:var(--font-sans-serif);
 
   --text-size-sm:0.75rem;
@@ -49,6 +48,31 @@
 }
 
 
+@font-face {
+  font-family:"Galaxie Copernicus";
+  src:url("/static/fonts/GalaxieCopernicus-Book.ttf") format("woff2"),url("/static/fonts/GalaxieCopernicus-Book.woff") format("woff"),url("/static/fonts/GalaxieCopernicus-Book.otf") format("opentype");
+  font-style:normal;font-weight:400;font-display: swap;
+}
+      
+
+@font-face {
+  font-family:"Galaxie Copernicus";
+  src:url("/static/fonts/Copernicus-Semibold.ttf") format("woff2"),url("/static/fonts/Copernicus-Semibold.woff") format("woff"),url("/static/fonts/Copernicus-Semibold.otf") format("opentype");
+  font-style:normal;font-weight:700;font-display: swap;
+}
+
+@font-face {
+  font-family:"Proxima Nova";
+  src:url("/static/fonts/Proxima-Regular.woff2") format("woff2"),url("/static/fonts/Proxima-Regular.woff") format("woff"),url("/static/fonts/Proxima-Regular.otf") format("opentype");
+  font-style:normal;font-weight:400;font-display: swap;
+}
+
+@font-face {
+  font-family:"Proxima Nova";
+  src:url("/static/fonts/Proxima-Bold.woff2") format("woff2"),url("/static/fonts/Proxima-Bold.woff") format("woff"),url("/static/fonts/Proxima-Bold.otf") format("opentype");
+  font-style:normal;font-weight:700;font-display: swap;
+}
+      
 
 /* Box sizing rules */
 *,
@@ -244,6 +268,10 @@ a small {
 }
 a:hover .title {
   color:var(--primary);
+}
+
+strong {
+  font-weight:700;
 }
 
 .highlight {
