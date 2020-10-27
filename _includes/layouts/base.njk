@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ renderData.title or title or metadata.title }}</title>
+    <title>{{ renderData.title or title or metadata.title }} » Hey, my name is Rob 👋</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
     <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
@@ -23,8 +23,8 @@
   <nav role="navigation"> 
     <ul class="link-list">
       <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/now">Now</a></li>
+      <li><a class="{{ 'active' if '/about' in page.url }}" href="/about">About</a></li>
+      <li><a class="{{ 'active' if '/now' in page.url }}" href="/now">Now</a></li>
     </ul>
   </nav>           
     <main>      

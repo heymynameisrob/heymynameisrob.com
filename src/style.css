@@ -368,6 +368,9 @@ nav ul li a {
   padding:0 .5rem;
   border-bottom-color:transparent;
 }
+nav ul li a.active {
+  border-color:var(--primary);
+}
 
 section{
   margin-top:var(--spacing-xl)
@@ -412,7 +415,7 @@ header img {
     flex-flow:wrap;
   }
   .post-list small {
-    flex:0 0 15%;
+    flex:0 0 17%;
   }
 }
 .post-list a {
