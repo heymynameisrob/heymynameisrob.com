@@ -10,6 +10,13 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("dd LLL yyyy");
   });
 
+  eleventyConfig.addCollection("feed", collection => {
+    return collection
+      .getFilteredByTag("posts")
+      .reverse()
+      .slice(0, 4);
+  });
+
   function extractExcerpt(article) {
     if (!article.hasOwnProperty('templateContent')) {
       console.warn('Failed to extract excerpt: Document has no property "templateContent".');

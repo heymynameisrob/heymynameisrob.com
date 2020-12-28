@@ -1,5 +1,6 @@
 ---
 title: Moving in an opposite direction
+description: Moving into a leadership role seems scary but by blogging the successes and failures, I hope to outline my approach to creating a great design team
 date: 2020-10-23
 type: Article
 layout: layouts/post.njk

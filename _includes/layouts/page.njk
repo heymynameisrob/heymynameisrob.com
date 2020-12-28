@@ -5,7 +5,7 @@ templateClass: post
 ---
 <header role="banner" class="page-header">  
   <h1>{{ title }}</h1>    
-  <p>Last updated {{date | readableDate}}</p>
+  <small>Last updated {{date | readableDate}}</small>
 </header>
 
 {{ content | safe }}
