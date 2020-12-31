@@ -1,7 +1,7 @@
 ---
 title: Moving in an opposite direction
-description: Moving into a leadership role seems scary but by blogging the successes and failures, I hope to outline my approach to creating a great design team
-date: 2020-10-23
+description: Drunk on nostaligia through Christmas, I've taken a step back from the social media world and tried to recapture some of the magic that made me fall in love with the web.
+date: 2020-12-20
 type: Article
 layout: layouts/post.njk
 ---
