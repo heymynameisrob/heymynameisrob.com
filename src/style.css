@@ -21,8 +21,8 @@
 
   --spacing-sm: calc(var(--text-line-height) * 0.5);
   --spacing-md: calc(var(--text-line-height) * 1);
-  --spacing-lg: calc(var(--text-line-height) * 1.5);
-  --spacing-xl: calc(var(--text-line-height) * 2);
+  --spacing-lg: calc(var(--text-line-height) * 2);
+  --spacing-xl: calc(var(--text-line-height) * 2.5);
   --spacing-max-width:42rem;
 }
 
