@@ -21,11 +21,15 @@
     <meta name="theme-color" content="#fd7e14">
   </head>
   <body {% if templateClass %} class="{{ templateClass }}"{% endif %}> 
-    {% include 'nav.njk' %}          
+    {% if templateClass !== 'home' %} 
+      <nav>
+        <a href="/"><img src="/static/avatar.png" loading="lazy" class="avatar" alt="Rob Hough" /></a>
+      </nav>
+    {% endif %}
     <main>      
       {{ content | safe }}
       <footer>          
-        <small>&copy; 2020. Built in code. </small>
+        <small>&copy; 2021 Rob Hough</small>        
       </footer>  
     </main>                 
     {# <script src="{{ '/static/main.js' | url }}"></script> #}
