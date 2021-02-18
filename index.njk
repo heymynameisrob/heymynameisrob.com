@@ -5,20 +5,9 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-<h1>Hey my name is Rob 👋</h1>
-<p>I'm a product designer and writer based in the UK. Currently, I'm leading design at <a href="https://nuom.co.uk">nuom</a>, a product design studio, where I spend most of my time building new products and ventures with early-stage founders. I'm also the co-host of <a href="https://founditpodcast.com">Found It Podcast</a>, a podcast all about early-stage startup stories.</p>
-<a href="/about">Learn more about me</a>
+{% include "header.njk" %}
 <section>
-  <h2>Latest writing</h2>  
-  {% set postslist = collections.feed %}  
-  {% include "postslist.njk" %}
-  <a href="/posts">Read more posts</a>
-</section>
-<section>
-  <h2>A few projects I've worked on</h2>  
-  <li><a href="https://dealdelivers.com">Deal Delivers</a> – Online local resource for delieries during the pandemic</li>    
-  <li><a href="https://hold.io">Hold.io</a> – Launched MVP for UK crypto/fintech startup</li>  
-  <li><a href="https://waitrose.com">Waitrose</a> – Worked on checkout experience for iOS and Android</li>
-  <li><a href="https://helpforce.community">Helpforce</a> – Community platform, self-assement tools etc</li>
-  <li><a href="https://indytute.com">Indytute</a> – UX design for indie experience days retailer</li>
+  <h5>Latest writing</h5>
+  {% set postslist = collections.posts %}  
+  {% include "postslist.njk" %}  
 </section>
