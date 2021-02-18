@@ -1,6 +1,7 @@
 ---
 title: Moving in an opposite direction
 description: Drunk on nostaligia through Christmas, I've taken a step back from the social media world and tried to recapture some of the magic that made me fall in love with the web.
+externalLink:
 date: 2020-12-20
 type: Article
 layout: layouts/post.njk
