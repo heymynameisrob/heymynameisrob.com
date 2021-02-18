@@ -1,6 +1,6 @@
 ---
 title: Becoming a design leader
-description: Moving into a leadership role seems scary but by blogging the successes and failures, I hope to outline my approach to creating a great design team.
+summary: Moving into a leadership role seems scary but by blogging the successes and failures, I hope to outline my approach to creating a great design team.
 externalLink:
 date: 2020-10-10
 type: Article
