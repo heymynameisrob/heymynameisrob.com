@@ -15,7 +15,7 @@ entries.push(path.resolve(__dirname, 'src/assets/styles/prism-atom-dark.css'));
 let cssFileName = 'styles/[name].css';
 
 if (process.env.NODE_ENV === 'production') {
-  cssFileName = 'styles/[name].[contenthash].css';
+  cssFileName = 'styles/[name].css';
 }
 
 module.exports = {

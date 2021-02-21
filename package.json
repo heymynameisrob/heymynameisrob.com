@@ -44,29 +44,14 @@
     "postcss-loader": "^3.0.0",
     "prettier": "^2.1.2",
     "rimraf": "^3.0.2",
-    "serve": "^11.3.2",
-    "tailwindcss": "^1.6.2",
+    "serve": "^11.3.2",    
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-fix-style-only-entries": "^0.5.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "eslint --fix",
-      "eslint"
-    ],
-    "*.json": [
-      "prettier --write"
-    ]
-  },
+  }, 
   "dependencies": {
     "luxon": "^1.26.0",
-    "markdown-it": "^12.0.4"
+    "markdown-it": "^12.0.4",
+    "tailwindcss": "^1.6.2"
   }
 }
