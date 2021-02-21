@@ -1,46 +1,72 @@
 {
-  "name": "personal-website",
+  "name": "my-blog",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "My blog",
   "scripts": {
-    "build:css": "env NODE_ENV=production postcss ./src/style.css -o ./static/style.css",    
-    "build:images": "imagemin ./src/img/* -o ./static/img",
-    "build:11ty": "eleventy",
-    "build": "run-s build:css build:images build:11ty",
-    "start:css": "postcss ./src/style.css -o ./static/style.css --watch",    
-    "start:11ty": "eleventy --serve",
-    "start": "run-p start:css start:11ty",
-    "debug": "DEBUG=* eleventy"
+    "build-dev:webpack": "webpack",
+    "watch:webpack": "webpack --watch",
+    "watch:eleventy": "cross-env ELEVENTY_ENV=development eleventy --serve",
+    "dev": "npm-run-all clean build-dev:webpack --parallel watch:*",
+    "build:webpack": "cross-env NODE_ENV=production webpack --mode production",
+    "build:eleventy": "cross-env ELEVENTY_ENV=production eleventy",
+    "build": "run-s clean build:*",
+    "serve:local": "serve _site",
+    "serve": "run-s build serve:local",
+    "clean": "rimraf _site",
+    "format:js": "prettier '**/*.js' --write && eslint '**/*.js' --fix",
+    "format:json": "prettier '**/*.json' --write",
+    "format": "run-s format:*",
+    "lint": "eslint --ext .js ."
   },
-  "keywords": [],
-  "author": "",
-  "browserslist": [
-    ">0.3%",
-    "not ie 11",
-    "not dead",
-    "not op_mini all"
-  ],
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/register": "^7.9.0",
-    "autoprefixer": "^9.7.6",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-minify": "^0.5.1",
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "autoprefixer": "^9.8.6",
+    "copy-webpack-plugin": "^6.0.3",
+    "cross-env": "^7.0.2",
+    "css-loader": "^4.2.1",
     "cssnano": "^4.1.10",
-    "imagemin-cli": "^5.1.0",
+    "date-fns": "^2.15.0",
+    "eleventy-plugin-lazyimages": "^2.0.1",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "file-loader": "^6.0.0",
+    "glob": "^7.1.6",
+    "html-minifier": "^4.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "husky": "^4.2.5",
+    "image-webpack-loader": "^6.0.0",
+    "lint-staged": "^10.2.11",
+    "mini-css-extract-plugin": "^0.9.0",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^6.0.23",
-    "postcss-import": "^12.0.1",
-    "precss": "^4.0.0"    
+    "postcss-loader": "^3.0.0",
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "serve": "^11.3.2",
+    "tailwindcss": "^1.6.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-fix-style-only-entries": "^0.5.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "eslint"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
-    "luxon": "^1.23.0",
-    "markdown-it": "^10.0.0",
-    "markdown-it-anchor": "^5.2.7"  
+    "luxon": "^1.26.0",
+    "markdown-it": "^12.0.4"
   }
 }

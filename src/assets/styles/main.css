@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom */
+a {
+  @apply text-green-900 font-bold underline bg-green-200;
+}
+
+a:hover {
+  @apply underline;
+}
+
+.container {
+  @apply max-w-6xl px-4 mx-auto;
+}
+
+main,
+.links {
+  @apply .max-w-screen-sm px-4 mx-auto;
+}
+
+nav[role="navigation"] {
+  @apply flex items-center py-2 px-4 bg-muted-dark bg-opacity-25;  
+}
+
+.links .active {
+  @apply bg-muted-dark text-warm-dark;
+}
+
+header h1 {
+  @apply text-2xl font-bold text-warm-dark;
+}
+
+
+.content {
+  @apply leading-8 text-xl;
+}
+
+.content p {
+  @apply my-5 leading-relaxed;
+}
+
+.content h1 {
+  @apply text-4xl font-bold mt-12 mb-5 leading-10 text-warm-dark;
+}
+
+.content h2 {
+  @apply text-2xl font-bold mt-10 mb-5 text-warm-dark;
+}
+
+.content h3 {
+  @apply text-xl font-bold mt-10 mb-5 text-warm-dark;
+}
+
+.content h4 {
+  @apply text-lg font-bold mt-10 mb-5 text-warm-dark;
+}
+
+.content h5 {
+  @apply text-base font-bold mt-10 mb-5 text-warm-dark;
+}
+
+.content h6 {
+  @apply text-lg font-bold mt-10 mb-5 text-warm-dark;
+}
+
+.content ul,
+.content ol,
+.content p {
+  @apply overflow-auto;
+}
+
+.content > div > ul,
+.content > div > ol {
+  @apply my-6;
+}
+
+.content ul,
+.content ol {
+  @apply pl-8;
+}
+
+.content ul {
+  @apply list-outside list-disc;
+}
+
+.content ol {
+  @apply list-outside list-decimal;
+}
+
+.content pre[class*='language-'] {
+  @apply my-8;
+}
+
+.content table {
+  @apply whitespace-no-wrap my-8 border-collapse block overflow-auto;
+}
+
+.content th,
+.content td {
+  @apply border px-8 py-4;
+}
+
+.content th {
+  @apply bg-gray-100;
+}
+
+.btn-primary {
+  @apply inline-block no-underline items-center justify-center px-8 py-3 text-base font-semibold rounded-lg text-white bg-green-700 shadow-sm;  
+}
+.btn-primary:hover {
+  @apply no-underline bg-green-800;
+}
+.btn-secondary {
+  @apply inline-block no-underline items-center justify-center px-8 py-3 text-base font-semibold rounded-lg text-warm-dark bg-muted-dark;  
+}
+.btn-secondary:hover {
+  @apply no-underline bg-muted-darkest;
+}

@@ -1,10 +1,8 @@
 const { DateTime } = require("luxon");
 const fs = require("fs");
 const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("static/");  
+module.exports = function (eleventyConfig) {  
   eleventyConfig.addPassthroughCopy("admin"); 
 
   eleventyConfig.addFilter("readableDate", dateObj => {
@@ -46,7 +44,6 @@ module.exports = function (eleventyConfig) {
     return excerpt;
   }
   eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));
-
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
   let markdownLibrary = markdownIt({
@@ -81,10 +78,10 @@ module.exports = function (eleventyConfig) {
 
     // These are all optional, defaults are shown:
     dir: {
-      input: ".",
+      input: "src",
       includes: "_includes",
       data: "_data",
       output: "_site"
-    }
+    }    
   };
 };

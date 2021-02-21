@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+templateClass: home
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+{% include "header.njk" %}
+<section>
+  <div class="flex flex-row items-center w-full timeline-container mb-4">  
+    <h5 class="font-bold text-sm uppercase text-warm-light">Latest writing</h5>
+    <div class="flex-1 h-px ml-4 bg-muted-darkest timeline-stroke"></div>
+  </div>
+  {% set postslist = collections.posts | reverse %}  
+  {% include "postslist.njk" %}  
+</section>
